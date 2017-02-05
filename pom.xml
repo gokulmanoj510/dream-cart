@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   
   <properties>
-		<spring.version>4.0.1.RELEASE</spring.version>
+		<spring.version>4.2.0.RELEASE</spring.version>
 	</properties>
   <dependencies>
     <dependency>
@@ -35,8 +35,62 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		 <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+  <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <dependency>
+    <groupId>commons-dbcp</groupId>
+    <artifactId>commons-dbcp</artifactId>
+    <version>1.4</version>
+</dependency>
+        
+        <dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <version>1.4.191</version>
+</dependency>
+
+    <dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.2.5.Final</version>
+</dependency>
+	
+	<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>5.3.4.Final</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.struts</groupId>
+    <artifactId>struts2-core</artifactId>
+    <version>2.5.8</version>
+</dependency>
+
+<dependency>
+    <groupId>jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+	
+  <dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-entitymanager</artifactId>
+   <version>5.2.5.Final</version>
+  </dependency>
+		
   </dependencies>
   <build>
     <finalName>Myproject</finalName>
   </build>
+  
 </project>

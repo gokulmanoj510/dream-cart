@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +6,24 @@
 <title>Dream Cart</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <spring:url value="/resources/css/bootstrap.min.css" var="minCss" />
+  <spring:url value="/resources/js/jquery-1.12.1.min.js" var="jqueryJs" />
+  <spring:url value="/resources/js/bootstrap.min.js" var="minJs" />
+  <spring:url value="/resources/image/logo.jpg" var="logo" />
+  <spring:url value="/resources/image/facebook.jpg" var="facebook" />
+  <spring:url value="/resources/image/twitter.jpg" var="twitter" />
+   <link  rel="stylesheet" href="${minCss}" />
+  <script src="${jqueryJs}"></script>
+  <script src="${minJs}"></script>
   <style>
+  @font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("resources/fonts/glyphiconshalflings-regular.eot");
+  src: url("resources/fonts/glyphiconshalflings-regular.eot?#iefix") format('embedded-opentype'),
+       url("resources/fonts/glyphiconshalflings-regular.woff") format('woff'),
+       url("resources/fonts/glyphiconshalflings-regular.ttf") format('truetype'),
+       url("resources/fonts/glyphiconshalflings-regular.svg#glyphicons_halflingsregular") format('svg');
+}
 body
 {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -31,7 +46,7 @@ color:green;
 <body>
 <div class="container">
   <div class="row" style="background-color:gold">
-    <div class="col-sm-1" style="margin-top:10px;" ><img src="C:\Users\user\Desktop\teamwork-people-tree-logo-creative-design-background-34023988.jpg" class="img-rounded" alt="Cinque Terre" width="70" height="70"></div>
+    <div class="col-sm-1" style="margin-top:10px;" ><img src="${logo}" class="img-rounded" alt="Cinque Terre" width="70" height="70"></div>
     <div class="col-sm-4"><h1 id="header1">DREAM CART</h1></div>
 <div class="col-sm-4"><div class="input-group"style="margin-top:20px">
             <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
@@ -57,7 +72,7 @@ color:green;
     <!-- Wrapper for slides -->
    <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="D:\WallpapersHD\hd_wallpaper_17924.jpg" alt="Chania" width="auto" height="300px" >
+        <img src="http://www.intrawallpaper.com/static/images/6903949-full-hd-wallpapers-27699_aAGj09F.jpg" alt="Chania" width="auto" height="300px" >
       </div>
 
       <div class="item">
@@ -362,8 +377,8 @@ color:green;
      <a href="http://localhost:8080/Myproject/aboutus.html" style="margin:20px">Contact Us</a> 
   </h4>
 <h4 style="margin-left:990px;margin-top:-30px">Follow us
-<img src="C:\Users\user\Desktop\facebook-icon-preview.jpg" class="img-circle" alt="Cinque Terre" width="30" height="23">
-<img src="C:\Users\user\Desktop\twitter-logo-vector-download.jpg" class="img-circle" alt="Cinque Terre" width="30" height="23">
+<img src="${facebook }" class="img-circle" alt="Cinque Terre" width="30" height="23">
+<img src="${twitter}" class="img-circle" alt="Cinque Terre" width="30" height="23">
 </h4>
 </div>
 </div>
